@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../../../css/landing/contact.scss';
-import request from '../../../../js/requests/landingpagerequest'
+import request from '../../../../js/requests/landingpagerequest.js'
 
 export default class Contact extends Component {
 
@@ -20,7 +20,22 @@ export default class Contact extends Component {
 
     sendButtonClicked(){
         let sendMessage = this.state;
-        request.sendMessage(sendMessage);
+        request.sendMessage(sendMessage)
+        .then(res => {
+            if (res === "message sent") {
+                this.setState(
+                    {
+                        senderName: '',
+                        senderEmail:'',
+                        mailSubject:'',
+                        phoneNumber:'',
+                        messsage:''
+                    }
+                )
+            } else {
+                return
+            }
+        });
     }
 
     handleChange(event) {

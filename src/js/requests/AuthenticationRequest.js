@@ -15,7 +15,8 @@ class AuthenticationRequest {
     }
 
     registerNewUser(userInfo) {
-        return axios.post(`${API_URL}/api/auth/signup`, {
+        console.log(userInfo.profileImage+ "HELLo1123423");
+        let signUpRequest = {
             username : userInfo.username,
             password : userInfo.password,
             email : userInfo.email,
@@ -23,7 +24,16 @@ class AuthenticationRequest {
             phoneNumber: userInfo.phoneNumber,
             location: userInfo.location,
             degree: userInfo.degree
-        })
+        };
+
+        let formData = new FormData;
+        formData.append("signupRequest", new Blob([JSON.stringify(signUpRequest)], {
+            type: "application/json"
+        }));
+        formData.append("profileImage", userInfo.profilePicture);
+        formData.append("cvFile", userInfo.cvFile);
+        formData.append("motiLetter", userInfo.motivationLetter);
+        return axios.post(`${API_URL}/api/auth/signup`, formData)
     }
 
     loginUser(userInfo) {

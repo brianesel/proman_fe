@@ -18,11 +18,24 @@ class SignupPage extends Component {
             phoneNumber: '',
             degree:'',
             hasLoginFailed: false,
-            showSuccessMessage: false
+            showSuccessMessage: false,
+            profilePicture: new FormData,
+            cvFile: new FormData,
+            motivationLetter: new FormData
         }
 
+        this.handleFileUpload = this.handleFileUpload.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.signupClicked = this.signupClicked.bind(this)
+    }
+
+    handleFileUpload(event) {
+        var files = event.target.files[0];
+        this.setState(
+            {
+                [event.target.name]: files
+            }
+        )
     }
 
     handleChange(event) {
@@ -34,6 +47,7 @@ class SignupPage extends Component {
     }
 
     signupClicked() {
+        
         let user = this.state;
         if(this.state.email===this.state.repeatedEmail && this.state.password===this.state.repeatedPassword){
             AuthenticationRequest
@@ -88,6 +102,9 @@ class SignupPage extends Component {
                             <p>Degree</p>
                             <input name="degree" type="text" value={this.state.degree} onChange={this.handleChange} placeholder="Degree"/>
                         </div>
+                        <input type="file" name="profilePicture" accept="image/jpeg" onChange={this.handleFileUpload} />
+                        <input type="file" accept="application/pdf" name="cvFile" onChange={this.handleFileUpload} />
+                        <input type="file" name="motivationLetter" accept="application/pdf" onChange={this.handleFileUpload} />
                     </div>
                     <button onClick={this.signupClicked}>Submit</button>
                     <Link className="link_after_submit" to="/signin">Already registered?</Link>
