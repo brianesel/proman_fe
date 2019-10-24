@@ -31,19 +31,25 @@ export default class UserSummary extends Component {
 
     render() {
         this.user_infos = Object.keys(this.state.user).map((key) =>{
-            if(key === "socialMedia"){
-                return this.user_socialMedia = Object.keys(this.state.user.socialMedia).map((item) => {
+            if(key === "socialMedia" && this.state.user[key] !== (undefined, null)){
+                this.user_socialMedia = Object.keys(this.state.user.socialMedia).map((item) => {
                     if(item !== "id"){
-                        return 
+                        this.state.user.socialMedia[item] ? this.socialMediaLink = item : this.socialMediaLink = "#"
+                        return (<a key={item} className="social_profile_link" href={this.socialMediaLink}><i className={"fab fa-"+item}/></a>)
                     }
                 })
-            }else {
-                return  <li key={key} className="row">
-                            <div className="info_header col-6">{key}:</div>
-                            <div className="info_content col-6">{this.state.user[key]}</div>
-                        </li>
+                return
+            }
+            if (key !== "socialMedia" && this.state.user[key] !== (undefined, null)) {
+                return  this.state.user[key] ? (<li key={key} className="row">
+                            <div className="info info_header col-6">{key}:</div>
+                            <div className="info info_content col-6">{this.state.user[key]}</div>
+                        </li>):(<li key={key} className="row">
+                            <div className="info info_header col-6">{key}:</div>
+                        </li>)
             }
         })
+    
         return (
             <div className="user_summary_wrapper col-md-4 col-lg-4">
                 <div className="user_summary_content">
@@ -70,10 +76,7 @@ export default class UserSummary extends Component {
                             Social profiles
                         </p>
                         <div className="section_contents social_contents">
-                            <a className="social_profile_link" href={this.state.user.socialMedia.facebook}><i className="fab fa-facebook"/></a>
-                            <a className="social_profile_link" href={this.state.user.socialMedia.twitter}><i className="fab fa-twitter"/></a>
-                            <a className="social_profile_link" href={this.state.user.socialMedia.linkedin}><i className="fab fa-linkedin"/></a>
-                            <a className="social_profile_link" href={this.state.user.socialMedia.github}><i className="fab fa-github"/></a>
+                            {this.user_socialMedia}
                         </div>
                     </section>
                     <section className="user_contact user_info">

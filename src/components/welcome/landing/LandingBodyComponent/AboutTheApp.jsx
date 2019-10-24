@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../../../css/landing/aboutapp.scss';
-import request from '../../../../js/requests/landingpagerequest'
 
 export default class AboutTheApp extends Component {
 

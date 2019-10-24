@@ -19,9 +19,9 @@ class SignupPage extends Component {
             degree:'',
             hasLoginFailed: false,
             showSuccessMessage: false,
-            profilePicture: new FormData,
-            cvFile: new FormData,
-            motivationLetter: new FormData
+            profilePicture: new FormData(),
+            cvFile: new FormData(),
+            motivationLetter: new FormData()
         }
 
         this.handleFileUpload = this.handleFileUpload.bind(this)

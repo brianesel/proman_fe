@@ -15,7 +15,6 @@ class AuthenticationRequest {
     }
 
     registerNewUser(userInfo) {
-        console.log(userInfo.profileImage+ "HELLo1123423");
         let signUpRequest = {
             username : userInfo.username,
             password : userInfo.password,
@@ -26,7 +25,7 @@ class AuthenticationRequest {
             degree: userInfo.degree
         };
 
-        let formData = new FormData;
+        let formData = new FormData();
         formData.append("signupRequest", new Blob([JSON.stringify(signUpRequest)], {
             type: "application/json"
         }));

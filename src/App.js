@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.scss';
 import WelcomePage from './components/welcome/Welcome.jsx'
+import WelcomeMetro from './components/metropolia/WelcomeMetro.jsx'
+import IdeaList from './components/metropolia/IdeaList.jsx'
 import LandingPage from './components/welcome/landing/LandingPage'
 import SignUp from './components/authen/SignupPage'
 import SignIn from './components/authen/LoginPage'
@@ -16,8 +18,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={WelcomePage}/>
+          <Route exact path="/" component={WelcomeMetro}/>
           <Route exact path="/welcome" component={WelcomePage}/>
+          <Route path="/metropolia/idea/list" component={IdeaList}/>
           <Route path="/landing" component={LandingPage}/>
           <Route path="/signup" component={SignUp}/>
           <Route path="/signin" component={SignIn}/>
