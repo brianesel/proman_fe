@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 const welcomepageWrapperStyle = {
         height: '100%',
@@ -62,9 +63,9 @@ class WelcomeMetro extends Component {
     render() {
         return (
             <div className="welcomePage_wrapper" style={welcomepageWrapperStyle}>
-                <a href="/metropolia/idea/list" style={welcomeTextWrapperStyle}>
+                <Link to="/metropolia/idea/list" style={welcomeTextWrapperStyle}>
                     <img style={metropoliaLogo} src="https://upload.wikimedia.org/wikipedia/fi/thumb/6/61/Metropolia_Ammattikorkeakoulu_logo.svg/1024px-Metropolia_Ammattikorkeakoulu_logo.svg.png"/>
-                </a>
+                </Link>
             </div>
         )
     }
