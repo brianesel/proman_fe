@@ -1,7 +1,7 @@
 import axios from 'axios'
 import CryptoJS from 'crypto-js'
 
-const API_URL= 'http://localhost:1609'
+import {API_URL} from '../../constants/index'
 
 class UserRequest {
     getUserInfo(){
