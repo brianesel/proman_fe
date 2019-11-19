@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL= 'http://localhost:1609'
+import {API_URL} from '../../constants/index'
 
 class landingpagerequest {
     getIdeaList(){

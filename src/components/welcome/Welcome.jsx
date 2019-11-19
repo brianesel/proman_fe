@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 const welcomepageWrapperStyle = {
         height: '100%',
@@ -58,10 +59,10 @@ class Welcome extends Component {
     render() {
         return (
             <div className="welcomePage_wrapper" style={welcomepageWrapperStyle}>
-                <a href="/landing" style={welcomeTextWrapperStyle}>
+                <Link to="/landing" style={welcomeTextWrapperStyle}>
                     <div className="upper-text" style={upperTextStyle}>WELCOME</div>
                     <div className="text" style={textWelcomeStyle}>WELCOME</div>
-                </a>
+                </Link>
             </div>
         )
     }

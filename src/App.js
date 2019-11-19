@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, HashRouter as Router} from 'react-router-dom';
 import './App.scss';
 import WelcomePage from './components/welcome/Welcome.jsx'
 import WelcomeMetro from './components/metropolia/WelcomeMetro.jsx'
@@ -16,10 +16,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 class App extends Component {
   render() { 
     return (
-      <BrowserRouter>
+      <Router>
         <Switch>
-          <Route exact path="/" component={WelcomeMetro}/>
-          <Route exact path="/welcome" component={WelcomePage}/>
+          <Route exact path="/metropolia" component={WelcomeMetro}/>
+          <Route exact path="/" component={WelcomePage}/>
           <Route path="/metropolia/idea/list" component={IdeaList}/>
           <Route path="/landing" component={LandingPage}/>
           <Route path="/signup" component={SignUp}/>
@@ -29,7 +29,7 @@ class App extends Component {
           <ProtectedRoute path="/user"/>
           <Route component={NotFound} />
         </Switch>
-      </BrowserRouter>
+      </Router>
   )};
 }
 

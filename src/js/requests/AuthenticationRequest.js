@@ -1,8 +1,7 @@
 import axios from 'axios'
 import CryptoJS from 'crypto-js'
-import { createMemoryHistory } from 'history';
-
-const API_URL= 'http://localhost:1609'
+import { createMemoryHistory } from 'history'
+import {API_URL} from '../../constants/index'
 
 class AuthenticationRequest {
     constructor() {

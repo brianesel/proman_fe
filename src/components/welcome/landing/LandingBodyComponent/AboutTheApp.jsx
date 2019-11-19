@@ -21,10 +21,10 @@ export default class AboutTheApp extends Component {
                         <div className="body_icon"><i className="fa fa-rainbow"/></div>
                         <div className="body row">
                             <div className="first_col col-6">
-                                The leaflet extends into a west around a home vegetable. Whatever reserved chest pulses over the bearded apple. When can a taxpayer rocket? Another cross vicar scotches the bull unfortunate. The thrown budget sickens opposite our arguable view. The mandatory cider shies away against the applied shout.
+                                Profile and idea management app.
                             </div>
                             <div className="second_col col-6">
-                                When can an objective joke generalize the dusty rubbish? The arc tail jumps against a patched customer. Your repeatable appendix freaks the pope within a vanishing buyer. The delicious sport activates a paradise. The steam leaks beneath this poet. The person shoes the paranoid.
+                                Share your ideas, find your partners and colleagues.
                             </div>
                         </div>
                     </div>
