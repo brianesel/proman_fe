@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch, HashRouter as Router} from 'react-router-dom';
+import { Route, Switch, HashRouter as Router} from 'react-router-dom';
 import './App.scss';
 import WelcomePage from './components/welcome/Welcome.jsx'
 import WelcomeMetro from './components/metropolia/WelcomeMetro.jsx'

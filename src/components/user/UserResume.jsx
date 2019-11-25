@@ -12,7 +12,7 @@ export default class UserResume extends Component {
     render() {
         return (
             <div>
-                THIS IS USER Resume
+                
             </div>
         )
     }

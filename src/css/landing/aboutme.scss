@@ -7,14 +7,49 @@
         margin: auto;
         text-align: center;
         .about_me_content {
-            margin: 7rem 0;
+            margin: 10rem 0;
             display: inline-block;
             .about_me_avatar {
                 position: relative;
-                img {
+                .about_me_img {
+                    position: relative;
                     height: 250px;
                     width: 200px;
                     object-fit: none;
+                    z-index: 1000;
+                }
+                .about_me_img:hover + .unicorn_container{
+                    .bounce {
+                        animation-name: bounce;
+                        animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);    
+                    }
+                    @keyframes bounce {
+                        0%   { transform: scale(1,1)      translateY(0); }
+                        10%  { transform: scale(1.1,.9)   translateY(0); }
+                        30%  { transform: scale(.9,1.1)   translateY(-200px); }
+                        50%  { transform: scale(1.05,.95) translateY(0); }
+                        57%  { transform: scale(1,1)      translateY(-14px); }
+                        64%  { transform: scale(1,1)      translateY(0); }
+                        100% { transform: scale(1,1)      translateY(0); }
+                    }
+                }
+                .unicorn_container {
+                    position: absolute;
+                    display: flex;
+                    height: 330px;
+                    width: 100%;
+                    bottom: 15px;
+                    right: -25px;
+                    z-index: 1;
+                    .box {
+                        align-self: flex-end;
+                        animation-duration: 3.5s;
+                        animation-iteration-count: infinite;
+                        height: 155px;
+                        margin: 0 auto 0 auto;
+                        transform-origin: bottom;
+                        width: 150px;
+                    }
                 }
 
             }
@@ -24,6 +59,7 @@
                 font-size: 63px;
                 font-weight: 500;
             }
+            
             .about_self_title {
                 color: $primaryWhite;
                 font-size: 26px;

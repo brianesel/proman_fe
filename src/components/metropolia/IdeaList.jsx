@@ -29,7 +29,7 @@ class IdeaList extends Component {
                 return <div className="email_item">{this.state.ideaList[ideakey].email[emailkey]}</div>
             }): this.idea_item_email_list = null;
             return(<div className="idea_item col-6">
-                <div className="idea_item_avatar"><img/></div>
+                <div className="idea_item_avatar"><img alt="idea avatar"/></div>
                 <p className="idea_item_name">{this.state.ideaList[ideakey].name}</p>
                 <p className="idea_item_description">
                     <p>Description:</p>

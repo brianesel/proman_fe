@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../../../css/landing/aboutme.scss'
 import avatar from '../../../../css/images/download.png'
+import unicorn from './unicorn.png'
 
 export default class AboutMe extends Component {
 
@@ -18,6 +19,9 @@ export default class AboutMe extends Component {
                     <div className="about_me_content">
                         <div className="about_me_avatar">
                             <img alt="my avatar" src={avatar} className="about_me_img"/>
+                            <div className="unicorn_container">
+                                <img className="box bounce" atl="just me unicorn" src={unicorn}/>
+                            </div>
                         </div>
                         <p className="headers about_me_headers">Nguyen Huu Hai Trung</p>
                         <p className="icon">______ <i class="fa fa-rainbow"/> ______</p>

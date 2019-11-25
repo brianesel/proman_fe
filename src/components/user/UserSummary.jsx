@@ -37,8 +37,8 @@ export default class UserSummary extends Component {
                         this.state.user.socialMedia[item] ? this.socialMediaLink = item : this.socialMediaLink = "#"
                         return (<a key={item} className="social_profile_link" href={this.socialMediaLink}><i className={"fab fa-"+item}/></a>)
                     }
+                    else return
                 })
-                return
             }
             if (key !== "socialMedia" && this.state.user[key] !== (undefined, null)) {
                 return  this.state.user[key] ? (<li key={key} className="row">
@@ -48,6 +48,7 @@ export default class UserSummary extends Component {
                             <div className="info info_header col-6">{key}:</div>
                         </li>)
             }
+            else return
         })
     
         return (

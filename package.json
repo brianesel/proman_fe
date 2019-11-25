@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage" : "http://brianeselthis.me",
+  "homepage": "http://brianeselthis.me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.12",
+    "redux": "^4.0.4",
     "serve": "^11.2.0",
     "style-loader": "^0.23.1",
     "styled-components": "^5.0.0-beta.8",
