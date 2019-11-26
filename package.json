@@ -3,7 +3,7 @@
   "homepage": "http://brianeselthis.me",
   "version": "0.1.0",
   "private": true,
-  "proxy" : "localhost:1609",
+  "proxy" : "http://localhost:1609",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/react-fontawesome": "^0.1.4",

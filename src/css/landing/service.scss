@@ -11,6 +11,17 @@
                 font-size: 59px;
                 font-weight: 500;
                 margin-bottom: 0;
+                &:hover {
+                    .stacks {
+                        display: contents;
+                    }
+                    .service {
+                        display: none;
+                    }
+                }
+                .stacks {
+                    display: none;
+                }
             }
             .body_icon {
                 position: relative;
